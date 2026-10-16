@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-trickwork_trickwork_1
+      APP_PORT: '3210'
+  trickwork:
+    image: ghcr.io/junkerderprovinz/trickwork:latest
+    restart: on-failure
+    environment:
+      PORT: '3210'

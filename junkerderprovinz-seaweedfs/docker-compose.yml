@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-seaweedfs_seaweedfs_1
+      APP_PORT: '23646'
+  seaweedfs:
+    image: chrislusf/seaweedfs:latest
+    restart: on-failure
+    volumes:
+    - ${APP_DATA_DIR}/data/data:/data
+    ports:
+    - 8333:8333
+    - 9333:9333
+    - 8888:8888

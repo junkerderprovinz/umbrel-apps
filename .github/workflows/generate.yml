@@ -1,0 +1,57 @@
+name: Generate
+
+# The app folders, the README icons and the README's app list are built from
+# junkerderprovinz/unraid-apps. A pull request only checks that they are
+# current; main rebuilds them every night and on demand. umbrelOS reads the
+# store straight from main, so there is nothing to publish.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "37 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: junkerderprovinz/unraid-apps
+          path: feed
+
+      - run: python3 -m pip install --quiet pyyaml
+
+      - name: Check
+        if: github.event_name == 'pull_request'
+        run: python3 tools/generate.py feed --check
+
+      - name: Build and commit
+        if: github.event_name != 'pull_request'
+        run: |
+          python3 tools/generate.py feed
+          git add junkerderprovinz-* .github/readme-icons README.md
+          if git diff --cached --quiet; then
+            echo "apps are current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Rebuild apps from unraid-apps $(git -C feed rev-parse --short HEAD)"
+          git push

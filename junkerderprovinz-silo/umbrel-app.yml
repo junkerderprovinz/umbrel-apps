@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: junkerderprovinz-silo
+category: files
+name: Silo
+version: 2026.10.15
+tagline: 'MinIO, still maintained: PGSTY''s fork of the open-source server, with the full web console. It reads an existing MinIO data folder as it is.'
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-silo/icon.png
+description: 'MinIO, still maintained: PGSTY''s fork of the open-source server, with the full web console. It reads an existing MinIO data folder as it is.'
+developer: Pigsty
+website: https://github.com/junkerderprovinz/unraid-apps/blob/main/silo/README.md
+dependencies: []
+repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/silo/README.md
+support: https://github.com/junkerderprovinz/unraid-apps/issues
+port: 35117
+gallery: []
+path: ''
+defaultUsername: umbrel
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps
+deterministicPassword: true

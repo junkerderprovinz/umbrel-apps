@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: junkerderprovinz-jdownloader
+category: media
+name: JDownloader
+version: 4.8.0
+tagline: JDownloader 2 with a complete, sleek dark UI out of the box, on a fast Selkies web desktop in your browser. No VNC client, no install.
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-jdownloader/icon.png
+description: JDownloader 2 with a dark mode GUI and full clipboard support out of the box. The download list, link grabber and settings are all dark, and everything runs on a hardware-accelerated Selkies web desktop. It looks like this from the first start, without tweaking or add-ons.
+developer: AppWork
+website: https://github.com/junkerderprovinz/jdownloader
+dependencies: []
+repo: https://github.com/junkerderprovinz/jdownloader
+support: https://github.com/junkerderprovinz/jdownloader/issues
+port: 35108
+gallery: []
+path: /
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps
+permissions:
+- STORAGE_DOWNLOADS

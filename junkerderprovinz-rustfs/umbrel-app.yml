@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: junkerderprovinz-rustfs
+category: files
+name: RustFS
+version: 1.0.1
+tagline: 'An S3-compatible object store written in Rust. Still a pre-release: every version so far is a release candidate.'
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-rustfs/icon.png
+description: RustFS is an S3-compatible object store written in Rust under the Apache-2.0 licence, one of the alternatives people turned to after MinIO's open edition stopped moving.
+developer: RustFS
+website: https://github.com/junkerderprovinz/unraid-apps/blob/main/rustfs/README.md
+dependencies: []
+repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/rustfs/README.md
+support: https://github.com/junkerderprovinz/unraid-apps/issues
+port: 35113
+gallery: []
+path: ''
+defaultUsername: umbrel
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps
+deterministicPassword: true

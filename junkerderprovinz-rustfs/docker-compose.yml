@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-rustfs_rustfs_1
+      APP_PORT: '9001'
+  rustfs:
+    image: rustfs/rustfs:latest
+    restart: on-failure
+    user: 0:0
+    volumes:
+    - ${APP_DATA_DIR}/data/data:/data
+    environment:
+      RUSTFS_ACCESS_KEY: umbrel
+      RUSTFS_SECRET_KEY: ${APP_PASSWORD}
+      RUSTFS_CONSOLE_CORS_ALLOWED_ORIGINS: '*'
+      RUSTFS_OBS_LOGGER_LEVEL: warn
+    ports:
+    - 9000:9000

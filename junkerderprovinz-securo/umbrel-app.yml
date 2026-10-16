@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: junkerderprovinz-securo
+category: finance
+name: Securo
+version: 1.0.0
+tagline: The Securo finance manager with its worker and scheduler in one container, on your own PostgreSQL and Redis or on built-in ones.
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-securo/icon.png
+description: 'Securo is a self-hosted personal finance manager: accounts, transactions, budgets, goals, assets and reports, with imports from OFX, QIF, CAMT and CSV and optional bank sync for European, US and Brazilian banks. Upstream runs it as six containers; this image puts the official backend and web app, the Celery worker and the scheduler into one.'
+developer: Junker der Provinz
+website: https://github.com/junkerderprovinz/securo
+dependencies: []
+repo: https://github.com/junkerderprovinz/securo
+support: https://github.com/junkerderprovinz/securo/issues
+port: 35116
+gallery: []
+path: /
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps

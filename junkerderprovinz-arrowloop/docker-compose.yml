@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-arrowloop_arrowloop_1
+      APP_PORT: '8422'
+      PROXY_AUTH_ADD: 'false'
+  arrowloop:
+    image: junkerderprovinz/arrowloop:latest
+    restart: on-failure
+    hostname: arrowloop
+    volumes:
+    - ${APP_DATA_DIR}/data:/config
+    - ${UMBREL_ROOT}/data/storage:/data
+    environment:
+      TZ: Europe/Berlin
+      ARROWLOOP_ADDR: 0.0.0.0:8422
+      ARROWLOOP_UMASK: '000'

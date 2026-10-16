@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: junkerderprovinz-knightloader
+category: media
+name: KnightLoader
+version: 2.1.1
+tagline: Self-hosted download manager for hosters, debrid, torrents, Usenet and video, with an Android app and a browser extension.
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-knightloader/icon.png
+description: A download manager that downloads everything and kneels to nothing.
+developer: Junker der Provinz
+website: https://github.com/junkerderprovinz/knightloader
+dependencies: []
+repo: https://github.com/junkerderprovinz/knightloader
+support: https://github.com/junkerderprovinz/knightloader/issues
+port: 35109
+gallery: []
+path: /
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps
+permissions:
+- STORAGE_DOWNLOADS

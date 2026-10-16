@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-versitygw_versitygw_1
+      APP_PORT: '7071'
+  versitygw:
+    image: versity/versitygw:latest
+    restart: on-failure
+    volumes:
+    - ${APP_DATA_DIR}/data/data:/data
+    - ${APP_DATA_DIR}/data:/config
+    environment:
+      VGW_BACKEND: posix
+      VGW_BACKEND_ARG: /data
+      ROOT_ACCESS_KEY: umbrel
+      ROOT_SECRET_KEY: ${APP_PASSWORD}
+      VGW_PORT: :7070
+      VGW_WEBUI_PORT: :7071
+      VGW_ADMIN_PORT: :7080
+      VGW_WEBUI_NO_TLS: 'true'
+      VGW_IAM_DIR: /config
+      VGW_REGION: us-east-1
+      VGW_HEALTH: /_health
+    ports:
+    - 7070:7070
+    - 7080:7080

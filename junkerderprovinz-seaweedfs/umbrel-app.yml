@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: junkerderprovinz-seaweedfs
+category: files
+name: SeaweedFS
+version: 4.48.0
+tagline: Fast, S3-API-compatible object store on the official image, the actively-maintained alternative now that MinIO's open edition is done.
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-seaweedfs/icon.png
+description: Fast, S3-API-compatible object store on the official image, the actively-maintained alternative now that MinIO's open edition is done.
+developer: Chris Lu
+website: https://github.com/junkerderprovinz/unraid-apps/blob/main/seaweedfs/README.md
+dependencies: []
+repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/seaweedfs/README.md
+support: https://github.com/junkerderprovinz/unraid-apps/issues
+port: 35115
+gallery: []
+path: ''
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps

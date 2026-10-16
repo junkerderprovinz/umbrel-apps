@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-garage_garage_1
+      APP_PORT: '3909'
+  garage:
+    image: junkerderprovinz/garage:latest
+    restart: on-failure
+    volumes:
+    - ${APP_DATA_DIR}/data/data:/data
+    - ${APP_DATA_DIR}/data/config:/config
+    environment:
+      DB_ENGINE: sqlite
+      PUID: '1000'
+      PGID: '1000'
+    ports:
+    - 3900:3900
+    - 3902:3902

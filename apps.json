@@ -1,0 +1,129 @@
+{
+  "arrowloop": {
+    "port": 35101,
+    "category": "files",
+    "auth": false,
+    "paths": {"/data": "${UMBREL_ROOT}/data/storage"}
+  },
+  "couchdb": {
+    "port": 35102,
+    "category": "developer",
+    "developer": "Apache Software Foundation",
+    "auth": false
+  },
+  "euro-office": {
+    "port": 35103,
+    "category": "files",
+    "developer": "Euro-Office",
+    "auth": false
+  },
+  "excalidraw": {
+    "port": 35104,
+    "category": "files",
+    "developer": "Excalidraw",
+    "web_port": 80
+  },
+  "featherdrop": {
+    "port": 35105,
+    "category": "files",
+    "auth": false
+  },
+  "garage": {
+    "port": 35106,
+    "category": "files",
+    "developer": "Deuxfleurs"
+  },
+  "handbrake": {
+    "port": 35107,
+    "category": "media",
+    "developer": "HandBrake",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage", "/watch": "${UMBREL_ROOT}/data/storage/handbrake/watch", "/output": "${UMBREL_ROOT}/data/storage/handbrake/output"}
+  },
+  "jdownloader": {
+    "port": 35108,
+    "category": "media",
+    "developer": "AppWork",
+    "web_port": 3000,
+    "paths": {"/downloads": "${UMBREL_ROOT}/data/storage/downloads"}
+  },
+  "knightloader": {
+    "port": 35109,
+    "category": "media",
+    "auth": false,
+    "paths": {"/data/downloads": "${UMBREL_ROOT}/data/storage/downloads"}
+  },
+  "krusader": {
+    "port": 35110,
+    "category": "files",
+    "developer": "KDE",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
+  "opencloud": {
+    "port": 35111,
+    "category": "files",
+    "developer": "OpenCloud",
+    "auth": false,
+    "env": {"OC_URL": "http://${DEVICE_DOMAIN_NAME}:35111", "PROXY_TLS": "false", "OC_INSECURE": "true"},
+    "username": "admin"
+  },
+  "prusaslicer": {
+    "port": 35112,
+    "category": "developer",
+    "developer": "Prusa Research",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
+  "rustfs": {
+    "port": 35113,
+    "category": "files",
+    "developer": "RustFS",
+    "tagline": "An S3-compatible object store written in Rust. Still a pre-release: every version so far is a release candidate.",
+    "description": "RustFS is an S3-compatible object store written in Rust under the Apache-2.0 licence, one of the alternatives people turned to after MinIO's open edition stopped moving."
+  },
+  "seafile": {
+    "port": 35114,
+    "category": "files",
+    "developer": "Seafile",
+    "auth": false,
+    "env": {"SEAFILE_SERVER_HOSTNAME": "${DEVICE_DOMAIN_NAME}:35114", "INIT_SEAFILE_ADMIN_EMAIL": "admin@example.com"},
+    "username": "admin@example.com",
+    "tagline": "The official Seafile server, with its secrets generated on first start and MariaDB, Redis and the notification server built in.",
+    "description": "Seafile is a file sync and share server with desktop and mobile clients, libraries you can encrypt on the client, and built-in wikis."
+  },
+  "seaweedfs": {
+    "port": 35115,
+    "category": "files",
+    "developer": "Chris Lu"
+  },
+  "securo": {
+    "port": 35116,
+    "category": "finance"
+  },
+  "silo": {
+    "port": 35117,
+    "category": "files",
+    "developer": "Pigsty"
+  },
+  "standardnotes-webui": {
+    "port": 35118,
+    "category": "files",
+    "developer": "Standard Notes"
+  },
+  "stellarium": {
+    "port": 35119,
+    "category": "media",
+    "developer": "Stellarium",
+    "web_port": 3000
+  },
+  "trickwork": {
+    "port": 35120,
+    "category": "media"
+  },
+  "versitygw": {
+    "port": 35121,
+    "category": "files",
+    "developer": "Versity"
+  }
+}

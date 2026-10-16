@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: junkerderprovinz-excalidraw
+category: files
+name: Excalidraw
+version: 1.0.0
+tagline: 'The hand-drawn whiteboard, built so it keeps to itself: shared links, live collaboration, the session scene and even the fonts all come from your own server.'
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-excalidraw/icon.png
+description: 'Excalidraw is a virtual whiteboard for sketches that look hand-drawn. This is a self-hosted build of it that keeps to itself: shared links, live collaboration, the session scene, the fonts and the icons all come from your own server, and the browser never contacts anyone else.'
+developer: Excalidraw
+website: https://github.com/junkerderprovinz/excalidraw
+dependencies: []
+repo: https://github.com/junkerderprovinz/excalidraw
+support: https://github.com/junkerderprovinz/excalidraw/issues
+port: 35104
+gallery: []
+path: /
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps

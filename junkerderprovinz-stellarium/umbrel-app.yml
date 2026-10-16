@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: junkerderprovinz-stellarium
+category: media
+name: Stellarium
+version: 1.2.0
+tagline: 'The Stellarium planetarium in your browser on a fast Selkies web desktop: pan the sky, zoom a nebula, scrub through time, no VNC client.'
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-stellarium/icon.png
+description: 'Stellarium, the free, open-source desktop planetarium, on a Selkies web desktop. Explore a photorealistic real-time sky in your browser: no VNC client, no local install. There is no maintained browser-desktop build of the actual Stellarium application ("Stellarium Web" is a separate, much lighter reimplementation), so this fills a genuine gap: a modern Selkies (WebRTC) build of the real thing for amd64 and arm64.'
+developer: Stellarium
+website: https://github.com/junkerderprovinz/stellarium
+dependencies: []
+repo: https://github.com/junkerderprovinz/stellarium
+support: https://github.com/junkerderprovinz/stellarium/issues
+port: 35119
+gallery: []
+path: /
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps

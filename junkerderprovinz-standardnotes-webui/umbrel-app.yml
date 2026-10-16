@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: junkerderprovinz-standardnotes-webui
+category: files
+name: StandardNotes-WebUI
+version: 2026.10.15
+tagline: The official Standard Notes web client, self-hosted next to your own sync server for end-to-end encrypted notes in the browser.
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-standardnotes-webui/icon.png
+description: The official Standard Notes web client, self-hosted next to your own sync server for end-to-end encrypted notes in the browser.
+developer: Standard Notes
+website: https://github.com/junkerderprovinz/unraid-apps/blob/main/standardnotes-webui/README.md
+dependencies: []
+repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/standardnotes-webui/README.md
+support: https://github.com/junkerderprovinz/unraid-apps/issues
+port: 35118
+gallery: []
+path: /
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps

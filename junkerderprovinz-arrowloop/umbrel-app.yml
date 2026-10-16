@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: junkerderprovinz-arrowloop
+category: files
+name: ArrowLoop
+version: 2.2.1
+tagline: Two-way file sync that shows you the plan before it touches a file, sends deletions to a trash and stops a run that would delete too much.
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-arrowloop/icon.png
+description: Sync your files everywhere. See the plan before anything moves.
+developer: Junker der Provinz
+website: https://github.com/junkerderprovinz/arrowloop
+dependencies: []
+repo: https://github.com/junkerderprovinz/arrowloop
+support: https://github.com/junkerderprovinz/arrowloop/issues
+port: 35101
+gallery: []
+path: /
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps

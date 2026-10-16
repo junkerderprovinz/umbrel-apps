@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-knightloader_knightloader_1
+      APP_PORT: '8749'
+      PROXY_AUTH_ADD: 'false'
+  knightloader:
+    image: junkerderprovinz/knightloader:latest
+    restart: on-failure
+    volumes:
+    - ${APP_DATA_DIR}/data:/data
+    - ${UMBREL_ROOT}/data/storage/downloads:/data/downloads
+    - ${APP_DATA_DIR}/data/watch:/watch
+    environment:
+      UMASK: '022'

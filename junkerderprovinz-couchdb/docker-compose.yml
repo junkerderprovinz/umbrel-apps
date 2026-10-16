@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-couchdb_couchdb_1
+      APP_PORT: '5984'
+      PROXY_AUTH_ADD: 'false'
+  couchdb:
+    image: couchdb:latest
+    restart: on-failure
+    volumes:
+    - ${APP_DATA_DIR}/data/data:/opt/couchdb/data
+    - ${APP_DATA_DIR}/data/local.d:/opt/couchdb/etc/local.d
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: ${APP_PASSWORD}

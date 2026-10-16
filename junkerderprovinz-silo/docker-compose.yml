@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-silo_silo_1
+      APP_PORT: '9001'
+  silo:
+    image: pgsty/silo:latest
+    restart: on-failure
+    volumes:
+    - ${APP_DATA_DIR}/data/data:/data
+    environment:
+      MINIO_ROOT_USER: umbrel
+      MINIO_ROOT_PASSWORD: ${APP_PASSWORD}
+    command: server /data --console-address ":9001"
+    ports:
+    - 9000:9000

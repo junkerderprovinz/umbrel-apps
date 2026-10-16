@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: junkerderprovinz-versitygw
+category: files
+name: VersityGW
+version: 1.9.0
+tagline: 'An S3 API in front of a share you already have: top-level folders become buckets, and every file stays readable over SMB and NFS at the same time.'
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-versitygw/icon.png
+description: 'Puts an S3 API in front of a folder you already have. Point it at a share and every file in it is an S3 object, readable over S3 and over SMB or NFS at the same time - no import, no second copy, no migration. Unlike an object store such as Garage or SeaweedFS, this one brings no storage of its own: your array stays the storage, and the bucket is a directory.'
+developer: Versity
+website: https://github.com/junkerderprovinz/unraid-apps/blob/main/versitygw/README.md
+dependencies: []
+repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/versitygw/README.md
+support: https://github.com/junkerderprovinz/unraid-apps/issues
+port: 35121
+gallery: []
+path: /
+defaultUsername: umbrel
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps
+deterministicPassword: true

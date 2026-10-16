@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: junkerderprovinz-couchdb
+category: developer
+name: couchdb
+version: 3.5.3
+tagline: The HTTP/JSON document database behind Obsidian LiveSync, on the official 3.x image with data, config and CORS mapped so they survive a recreate or update.
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-couchdb/icon.png
+description: The HTTP/JSON document database behind Obsidian LiveSync, on the official 3.x image with data, config and CORS mapped so they survive a recreate or update.
+developer: Apache Software Foundation
+website: https://github.com/junkerderprovinz/unraid-apps/blob/main/couchdb/README.md
+dependencies: []
+repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/couchdb/README.md
+support: https://github.com/junkerderprovinz/unraid-apps/issues
+port: 35102
+gallery: []
+path: /_utils/
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps
+deterministicPassword: true
