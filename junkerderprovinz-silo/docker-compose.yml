@@ -14,4 +14,4 @@ services:
       MINIO_ROOT_PASSWORD: ${APP_PASSWORD}
     command: server /data --console-address ":9001"
     ports:
-    - 9000:9000
+    - 35208:9000

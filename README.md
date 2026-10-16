@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/junkerderprovinz/umbrel-apps/actions/workflows/generate.yml"><img src="https://img.shields.io/github/actions/workflow/status/junkerderprovinz/umbrel-apps/generate.yml?branch=main&label=Generate&style=for-the-badge&logo=githubactions&logoColor=white" alt="Generate" height="36"></a>&nbsp;
-  <a href="#apps"><img src="https://img.shields.io/badge/Apps-21-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
+  <a href="#apps"><img src="https://img.shields.io/badge/Apps-20-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
   <a href="https://github.com/junkerderprovinz/umbrel-apps/commits/main"><img src="https://img.shields.io/github/last-commit/junkerderprovinz/umbrel-apps?branch=main&style=for-the-badge&logo=git&logoColor=white&label=Updated" alt="Last commit" height="36"></a>&nbsp;
   <a href="https://umbrel.com/umbrelos"><img src="https://img.shields.io/badge/umbrelOS-Community%20store-5351F3?style=for-the-badge&logoColor=white" alt="umbrelOS community app store" height="36"></a>&nbsp;
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" height="36"></a>
@@ -115,15 +115,6 @@ JDownloader 2 with a complete, sleek dark UI out of the box, on a fast Selkies w
 
 **Krusader**<br>
 Twin-pane KDE file manager with a native dark theme on a fast Selkies web desktop, with Kate, krename and RAR built in.
-
-<br clear="all">
-
-<img src=".github/readme-icons/opencloud.png" width="84" align="left" alt="OpenCloud">
-<a href="https://github.com/junkerderprovinz/opencloud#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
-<a href="https://github.com/junkerderprovinz/opencloud/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
-
-**OpenCloud**<br>
-One-click OpenCloud file sync &amp; share: auto-runs init, heals appdata permissions and honours PUID/PGID.
 
 <br clear="all">
 
@@ -243,12 +234,12 @@ Questions and bugs go to the issue tracker of the app's own repository; every ap
 
 The apps are built from the Unraid templates in [unraid-apps](https://github.com/junkerderprovinz/unraid-apps), through the same compose files the app repositories offer for other Docker hosts, with the changes umbrelOS needs:
 
-- Every web interface sits behind Umbrel's app proxy on a port of its own, 35101 and up. Apps that serve HTTPS with their own certificate are reached over their plain HTTP port instead, and umbrelOS adds HTTPS in front.
-- Umbrel's login guards the apps that have none of their own. It is off for the apps whose own clients have to reach them: KnightLoader, ArrowLoop, featherdrop's share links, CouchDB, Seafile, OpenCloud and Euro-Office.
+- Every web interface sits behind Umbrel's app proxy on a port of its own, 35101 and up.
+- Umbrel's login guards the apps that have none of their own. It is off for the apps whose own clients have to reach them: KnightLoader, ArrowLoop, featherdrop's share links, CouchDB, Seafile and Euro-Office.
 - Appdata goes to the app's data folder. File managers, slicers and download managers see umbrelOS' shared storage, downloads land in its **Downloads** folder.
 - `PUID` and `PGID` are `1000`, the user umbrelOS runs its apps as.
-- S3 and other ports that are not a web page stay published as they are.
-- Apps without a web page of their own (JuiceFS, ParleyPort) and apps that need a database next to them (Matrix, n8n, Claper) are not in the store yet.
+- S3 and the other ports that are not a web page move to ports of their own as well, 35201 and up. Their usual numbers clash with apps in Umbrel's store and with each other. Each app's description in umbrelOS lists its ports.
+- Apps without a web page of their own (JuiceFS, ParleyPort) and apps that need a database next to them (Matrix, n8n, Claper) are not in the store yet. Neither is OpenCloud: its login service accepts only an https:// address, and Umbrel's app proxy talks plain HTTP to the app.
 
 To change an app, edit its template in unraid-apps, not the app folders, `.github/readme-icons/` or the app list in this README. A workflow here rebuilds them every night. To build them by hand:
 
@@ -256,7 +247,7 @@ To change an app, edit its template in unraid-apps, not the app folders, `.githu
 python3 tools/generate.py ../unraid-apps
 ```
 
-`apps.json` lists the apps in the store with their Umbrel port and category. Per app it can also name the port the proxy talks to (`web_port`), turn Umbrel's login off (`auth`), set where a folder goes (`paths`), leave a path out (`drop_paths`), set variables (`env`), name the login shown next to the app (`username`), name the upstream developer (`developer`), read a template file with another name (`xml`) or replace the short text and description (`tagline`, `description`).
+`apps.json` lists the apps in the store with their Umbrel port and category. Per app it can also name the port the proxy talks to (`web_port`), give the other ports their Umbrel port (`host_ports`), turn Umbrel's login off (`auth`), set where a folder goes (`paths`), leave a path out (`drop_paths`), set variables (`env`), name the login shown next to the app (`username`), name the upstream developer (`developer`), read a template file with another name (`xml`) or replace the short text and description (`tagline`, `description`).
 
 
 ## How AI is used here

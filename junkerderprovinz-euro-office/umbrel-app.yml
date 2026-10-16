@@ -5,7 +5,10 @@ name: Euro-Office
 version: 1.2.1
 tagline: Sovereign, OnlyOffice-compatible document server for browser editing of Office and OpenDocument files, wired into OpenCloud over WOPI.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-euro-office/icon.png
-description: Euro Office Document Server - a sovereign, European document server for browser-based editing of text documents, spreadsheets and presentations. It is a maintained fork of the OnlyOffice Document Server, so it speaks the same WOPI and OnlyOffice APIs and plugs straight into OpenCloud (and Nextcloud/ownCloud). Use it to edit .docx / .xlsx / .pptx and .odt / .ods / .odp files right in your browser, without any desktop office suite.
+description: 'Euro Office Document Server - a sovereign, European document server for browser-based editing of text documents, spreadsheets and presentations. It is a maintained fork of the OnlyOffice Document Server, so it speaks the same WOPI and OnlyOffice APIs and plugs straight into OpenCloud (and Nextcloud/ownCloud). Use it to edit .docx / .xlsx / .pptx and .odt / .ods / .odp files right in your browser, without any desktop office suite.
+
+
+  Besides the web interface it listens on: HTTPS on port 35201.'
 developer: Euro-Office
 website: https://github.com/junkerderprovinz/euro-office
 dependencies: []

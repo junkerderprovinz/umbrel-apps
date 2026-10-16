@@ -22,6 +22,8 @@ services:
       VGW_IAM_DIR: /config
       VGW_REGION: us-east-1
       VGW_HEALTH: /_health
+      VGW_WEBUI_GATEWAYS: http://${DEVICE_DOMAIN_NAME}:35209
+      VGW_WEBUI_ADMIN_GATEWAYS: http://${DEVICE_DOMAIN_NAME}:35210
     ports:
-    - 7070:7070
-    - 7080:7080
+    - 35209:7070
+    - 35210:7080

@@ -18,4 +18,4 @@ services:
       USE_UNAUTHORIZED_STORAGE: 'true'
       ONLYOFFICE_HTTPS_HSTS_ENABLED: 'true'
     ports:
-    - 9943:443
+    - 35201:443

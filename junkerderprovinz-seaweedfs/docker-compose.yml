@@ -10,6 +10,6 @@ services:
     volumes:
     - ${APP_DATA_DIR}/data/data:/data
     ports:
-    - 8333:8333
-    - 9333:9333
-    - 8888:8888
+    - 35205:8333
+    - 35206:9333
+    - 35207:8888

@@ -15,7 +15,8 @@
     "port": 35103,
     "category": "files",
     "developer": "Euro-Office",
-    "auth": false
+    "auth": false,
+    "host_ports": {"443": 35201}
   },
   "excalidraw": {
     "port": 35104,
@@ -31,7 +32,8 @@
   "garage": {
     "port": 35106,
     "category": "files",
-    "developer": "Deuxfleurs"
+    "developer": "Deuxfleurs",
+    "host_ports": {"3900": 35202, "3902": 35203}
   },
   "handbrake": {
     "port": 35107,
@@ -60,14 +62,6 @@
     "web_port": 3000,
     "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
   },
-  "opencloud": {
-    "port": 35111,
-    "category": "files",
-    "developer": "OpenCloud",
-    "auth": false,
-    "env": {"OC_URL": "http://${DEVICE_DOMAIN_NAME}:35111", "PROXY_TLS": "false", "OC_INSECURE": "true"},
-    "username": "admin"
-  },
   "prusaslicer": {
     "port": 35112,
     "category": "developer",
@@ -80,7 +74,8 @@
     "category": "files",
     "developer": "RustFS",
     "tagline": "An S3-compatible object store written in Rust. Still a pre-release: every version so far is a release candidate.",
-    "description": "RustFS is an S3-compatible object store written in Rust under the Apache-2.0 licence, one of the alternatives people turned to after MinIO's open edition stopped moving."
+    "description": "RustFS is an S3-compatible object store written in Rust under the Apache-2.0 licence, one of the alternatives people turned to after MinIO's open edition stopped moving.",
+    "host_ports": {"9000": 35204}
   },
   "seafile": {
     "port": 35114,
@@ -95,7 +90,8 @@
   "seaweedfs": {
     "port": 35115,
     "category": "files",
-    "developer": "Chris Lu"
+    "developer": "Chris Lu",
+    "host_ports": {"8333": 35205, "9333": 35206, "8888": 35207}
   },
   "securo": {
     "port": 35116,
@@ -104,12 +100,14 @@
   "silo": {
     "port": 35117,
     "category": "files",
-    "developer": "Pigsty"
+    "developer": "Pigsty",
+    "host_ports": {"9000": 35208}
   },
   "standardnotes-webui": {
     "port": 35118,
     "category": "files",
-    "developer": "Standard Notes"
+    "developer": "Standard Notes",
+    "web_port": 80
   },
   "stellarium": {
     "port": 35119,
@@ -124,6 +122,8 @@
   "versitygw": {
     "port": 35121,
     "category": "files",
-    "developer": "Versity"
+    "developer": "Versity",
+    "host_ports": {"7070": 35209, "7080": 35210},
+    "env": {"VGW_WEBUI_GATEWAYS": "http://${DEVICE_DOMAIN_NAME}:35209", "VGW_WEBUI_ADMIN_GATEWAYS": "http://${DEVICE_DOMAIN_NAME}:35210"}
   }
 }

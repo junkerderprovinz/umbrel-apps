@@ -5,7 +5,10 @@ name: SeaweedFS
 version: 4.48.0
 tagline: Fast, S3-API-compatible object store on the official image, the actively-maintained alternative now that MinIO's open edition is done.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-seaweedfs/icon.png
-description: Fast, S3-API-compatible object store on the official image, the actively-maintained alternative now that MinIO's open edition is done.
+description: 'Fast, S3-API-compatible object store on the official image, the actively-maintained alternative now that MinIO''s open edition is done.
+
+
+  Besides the web interface it listens on: S3 API on port 35205, Master UI on port 35206, Filer UI on port 35207.'
 developer: Chris Lu
 website: https://github.com/junkerderprovinz/unraid-apps/blob/main/seaweedfs/README.md
 dependencies: []

@@ -204,7 +204,22 @@ def build(feed, gen_compose, app, overrides):
 
     service.pop("container_name", None)
     service["restart"] = "on-failure"
-    ports = [p for p in service.pop("ports", []) if p.split(":")[1].split("/")[0] not in (web_target, proxied)]
+    # Every other port moves to one of our own, since the template's (9000,
+    # 8888, ...) are taken by apps in Umbrel's store or by each other.
+    ports, listens = [], []
+    for mapping in service.pop("ports", []):
+        target = mapping.split(":")[1]
+        bare = target.split("/")[0]
+        if bare in (web_target, proxied):
+            continue
+        host = overrides.get("host_ports", {}).get(bare)
+        if host is None:
+            raise SystemExit(f"{app}: port {bare} needs a host port in apps.json")
+        ports.append(f"{host}:{target}")
+        config = root.find(f"Config[@Type='Port'][@Target='{bare}']")
+        title = config.get("Name") if config is not None else None
+        label = re.sub(r"\s+Port$", "", title or bare)
+        listens.append(f"{label} on port {host}")
     if ports:
         service["ports"] = ports
 
@@ -262,6 +277,8 @@ def build(feed, gen_compose, app, overrides):
     description = overrides.get("description") or first_paragraph(root)
     if unraid_specific(description):
         description = tagline
+    if listens:
+        description += "\n\nBesides the web interface it listens on: " + ", ".join(listens) + "."
     home = (readme if wrapper else repo.group(0)) if repo else (root.findtext("Project") or "").strip()
 
     manifest = {
@@ -336,9 +353,9 @@ def main():
 
     gen_compose = load_gen_compose(args.feed)
     apps = json.loads((ROOT / "apps.json").read_text(encoding="utf-8"))
-    ports = [o["port"] for o in apps.values()]
+    ports = [p for o in apps.values() for p in [o["port"], *o.get("host_ports", {}).values()]]
     if len(ports) != len(set(ports)):
-        raise SystemExit("apps.json gives two apps the same port")
+        raise SystemExit("apps.json gives the same port twice")
 
     # The icons are copied rather than linked, so the store holds everything
     # it shows and keeps working if unraid-apps moves.
@@ -374,12 +391,11 @@ def main():
                 target.write_bytes(content)
     present = [p for d in ROOT.glob(f"{STORE}-*") for p in d.rglob("*") if p.is_file()]
     present += [p for p in (ROOT / ".github" / "readme-icons").glob("*") if p.is_file()]
-    for leftover in sorted(p.relative_to(ROOT).as_posix() for p in present):
-        if leftover not in wanted:
-            stale.append(leftover)
-            if not args.check:
-                (ROOT / leftover).unlink()
+    removed = [p for p in sorted(p.relative_to(ROOT).as_posix() for p in present) if p not in wanted]
+    stale += removed
     if not args.check:
+        for leftover in removed:
+            (ROOT / leftover).unlink()
         for folder in sorted(ROOT.glob(f"{STORE}-*/**"), reverse=True):
             if folder.is_dir() and not any(folder.iterdir()):
                 folder.rmdir()
@@ -389,7 +405,7 @@ def main():
         print("run: python tools/generate.py <unraid-apps checkout>", file=sys.stderr)
         return 1
     for name in stale:
-        print(f"updated {name}")
+        print(f"{'removed' if name in removed else 'updated'} {name}")
     return 0
 
 
