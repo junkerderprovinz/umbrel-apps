@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-krusader
 category: files
 name: Krusader
-version: 2.6.0
+version: 2.6.1
 tagline: Twin-pane KDE file manager with a native dark theme on a fast Selkies web desktop, with Kate, krename and RAR built in.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-krusader/icon.png
 description: Krusader file manager with native Dark Mode, running on a hardware-accelerated Selkies web desktop. It responds much faster than the noVNC-based Krusader containers (binhex / jlesage / ich777).
