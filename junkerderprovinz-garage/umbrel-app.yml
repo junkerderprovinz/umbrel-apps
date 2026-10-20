@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-garage
 category: files
 name: Garage
-version: 1.0.1
+version: 1.0.2
 tagline: Garage's S3-compatible object store and its web admin panel in one container, with the single-node layout and S3 keys created automatically.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-garage/icon.png
 description: 'Garage''s S3-compatible object store and its web admin panel in one container, with the single-node layout and S3 keys created automatically.
