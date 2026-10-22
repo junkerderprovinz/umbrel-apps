@@ -12,6 +12,5 @@ services:
     - ${APP_DATA_DIR}/data:/data
     - ${UMBREL_ROOT}/data/storage/downloads:/data/downloads
     - ${APP_DATA_DIR}/data/user:/mnt/user
-    - ${APP_DATA_DIR}/data/watch:/watch
     environment:
       UMASK: '022'

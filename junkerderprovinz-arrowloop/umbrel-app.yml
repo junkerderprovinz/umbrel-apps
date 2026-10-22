@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-arrowloop
 category: files
 name: ArrowLoop
-version: 2.2.6
+version: 2.2.7
 tagline: Two-way file sync that shows you the plan before it touches a file, sends deletions to a trash and stops a run that would delete too much.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-arrowloop/icon.png
 description: Sync your files everywhere. See the plan before anything moves.
