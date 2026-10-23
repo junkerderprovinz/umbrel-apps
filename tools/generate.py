@@ -267,7 +267,7 @@ def build(feed, gen_compose, app, overrides):
     if not {"amd64", "arm64"} <= set(archs):
         print(f"{app}: image is built for {', '.join(archs)} only", file=sys.stderr)
     readme = (root.findtext("ReadMe") or "").strip()
-    repo = re.match(r"https://github\.com/junkerderprovinz/[^/]+", readme)
+    repo = re.match(r"https://github\.com/junkerderprovinz/[^/#?]+", readme)
     # A wrapper has no repository of its own; its README lives in unraid-apps.
     wrapper = repo is not None and repo.group(0).endswith("/unraid-apps")
     version = (release_version(repo.group(0)) if repo and not wrapper else None) or image_version \
