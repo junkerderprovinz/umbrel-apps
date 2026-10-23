@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: junkerderprovinz-gridcraft
+category: files
+name: GridCraft
+version: 1.1.0
+tagline: 'GridCraft on a Selkies web desktop: a spreadsheet with formulas and charts that opens and saves Excel workbooks.'
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-gridcraft/icon.png
+description: GridCraft, a spreadsheet that opens and saves Excel .xlsx workbooks, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.
+developer: ArtCraft team
+website: https://github.com/junkerderprovinz/artcraft-apps
+dependencies: []
+repo: https://github.com/junkerderprovinz/artcraft-apps
+support: https://github.com/junkerderprovinz/artcraft-apps/issues
+port: 35128
+gallery: []
+path: /
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps

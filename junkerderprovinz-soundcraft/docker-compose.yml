@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-soundcraft_soundcraft_1
+      APP_PORT: '3000'
+  soundcraft:
+    image: junkerderprovinz/soundcraft:latest
+    restart: on-failure
+    shm_size: 1gb
+    volumes:
+    - ${APP_DATA_DIR}/data:/config
+    - ${UMBREL_ROOT}/data/storage:/storage
+    environment:
+      TZ: Europe/Vienna
+      PUID: '1000'
+      PGID: '1000'
+      UMASK: '022'

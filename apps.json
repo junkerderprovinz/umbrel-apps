@@ -5,11 +5,39 @@
     "auth": false,
     "paths": {"/data": "${UMBREL_ROOT}/data/storage"}
   },
+  "cadcraft": {
+    "port": 35122,
+    "category": "files",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
   "couchdb": {
     "port": 35102,
     "category": "developer",
     "developer": "Apache Software Foundation",
     "auth": false
+  },
+  "deckcraft": {
+    "port": 35123,
+    "category": "files",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
+  "designcraft": {
+    "port": 35124,
+    "category": "files",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
+  "effectcraft": {
+    "port": 35125,
+    "category": "media",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
   },
   "euro-office": {
     "port": 35103,
@@ -29,11 +57,32 @@
     "category": "files",
     "auth": false
   },
+  "figcraft": {
+    "port": 35126,
+    "category": "files",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
+  "filmcraft": {
+    "port": 35127,
+    "category": "media",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
   "garage": {
     "port": 35106,
     "category": "files",
     "developer": "Deuxfleurs",
     "host_ports": {"3900": 35202, "3902": 35203}
+  },
+  "gridcraft": {
+    "port": 35128,
+    "category": "files",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
   },
   "handbrake": {
     "port": 35107,
@@ -59,6 +108,27 @@
     "port": 35110,
     "category": "files",
     "developer": "KDE",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
+  "lightcraft": {
+    "port": 35129,
+    "category": "media",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
+  "pdfcraft": {
+    "port": 35130,
+    "category": "files",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
+  "photocraft": {
+    "port": 35131,
+    "category": "media",
+    "developer": "ArtCraft team",
     "web_port": 3000,
     "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
   },
@@ -103,6 +173,13 @@
     "developer": "Pigsty",
     "host_ports": {"9000": 35208}
   },
+  "soundcraft": {
+    "port": 35132,
+    "category": "media",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
   "standardnotes-webui": {
     "port": 35118,
     "category": "files",
@@ -119,11 +196,25 @@
     "port": 35120,
     "category": "media"
   },
+  "vectorcraft": {
+    "port": 35133,
+    "category": "media",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
   "versitygw": {
     "port": 35121,
     "category": "files",
     "developer": "Versity",
     "host_ports": {"7070": 35209, "7080": 35210},
     "env": {"VGW_WEBUI_GATEWAYS": "http://${DEVICE_DOMAIN_NAME}:35209", "VGW_WEBUI_ADMIN_GATEWAYS": "http://${DEVICE_DOMAIN_NAME}:35210"}
+  },
+  "wordcraft": {
+    "port": 35134,
+    "category": "files",
+    "developer": "ArtCraft team",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
   }
 }
