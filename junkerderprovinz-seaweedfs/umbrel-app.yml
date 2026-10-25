@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-seaweedfs
 category: files
 name: SeaweedFS
-version: 4.48.0
+version: 4.50.0
 tagline: Fast, S3-API-compatible object store on the official image, the actively-maintained alternative now that MinIO's open edition is done.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-seaweedfs/icon.png
 description: 'Fast, S3-API-compatible object store on the official image, the actively-maintained alternative now that MinIO''s open edition is done.
