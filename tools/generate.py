@@ -216,7 +216,10 @@ def build(feed, gen_compose, app, overrides):
         if host is None:
             raise SystemExit(f"{app}: port {bare} needs a host port in apps.json")
         ports.append(f"{host}:{target}")
-        config = root.find(f"Config[@Type='Port'][@Target='{bare}']")
+        mode = target.split("/")[1] if "/" in target else "tcp"
+        config = root.find(f"Config[@Type='Port'][@Target='{bare}'][@Mode='{mode}']")
+        if config is None:
+            config = root.find(f"Config[@Type='Port'][@Target='{bare}']")
         title = config.get("Name") if config is not None else None
         label = re.sub(r"\s+Port$", "", title or bare)
         listens.append(f"{label} on port {host}")

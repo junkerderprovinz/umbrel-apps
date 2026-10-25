@@ -139,6 +139,16 @@
     "web_port": 3000,
     "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
   },
+  "rustdesk": {
+    "port": 35135,
+    "category": "networking",
+    "developer": "RustDesk",
+    "auth": false,
+    "env": {"RELAY": "${DEVICE_DOMAIN_NAME}:21117", "RUSTDESK_API_RUSTDESK_ID_SERVER": "${DEVICE_DOMAIN_NAME}:21116", "RUSTDESK_API_RUSTDESK_RELAY_SERVER": "${DEVICE_DOMAIN_NAME}:21117", "RUSTDESK_API_RUSTDESK_API_SERVER": "http://${DEVICE_DOMAIN_NAME}:35135"},
+    "tagline": "Your own RustDesk server with a web console, accounts, an address book on every client and devices that can change their ID.",
+    "description": "RustDesk is an open-source remote desktop for Windows, macOS, Linux, Android and iOS. This server adds a web console, user accounts, a shared address book and a web client to the ID server and the relay. The clients use ID server port 21116 and relay port 21117 on your Umbrel.",
+    "host_ports": {"21115": 21115, "21116": 21116, "21117": 21117, "21118": 21118, "21119": 21119}
+  },
   "rustfs": {
     "port": 35113,
     "category": "files",

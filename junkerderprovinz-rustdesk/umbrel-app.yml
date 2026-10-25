@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: junkerderprovinz-rustdesk
+category: networking
+name: RustDesk
+version: 1.0.1
+tagline: Your own RustDesk server with a web console, accounts, an address book on every client and devices that can change their ID.
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-rustdesk/icon.png
+description: 'RustDesk is an open-source remote desktop for Windows, macOS, Linux, Android and iOS. This server adds a web console, user accounts, a shared address book and a web client to the ID server and the relay. The clients use ID server port 21116 and relay port 21117 on your Umbrel.
+
+
+  Besides the web interface it listens on: NAT test on port 21115, ID server (TCP) on port 21116, ID server (UDP) on port 21116, Relay on port 21117, ID server (websocket) on port 21118, Relay (websocket) on port 21119.'
+developer: RustDesk
+website: https://github.com/junkerderprovinz/rustdesk
+dependencies: []
+repo: https://github.com/junkerderprovinz/rustdesk
+support: https://github.com/junkerderprovinz/rustdesk/issues
+port: 35135
+gallery: []
+path: /_admin/
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps
