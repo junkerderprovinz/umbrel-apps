@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-silo
 category: files
 name: Silo
-version: 2026.10.18
+version: 2026.10.26
 tagline: 'MinIO, still maintained: PGSTY''s fork of the open-source server, with the full web console. It reads an existing MinIO data folder as it is.'
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-silo/icon.png
 description: 'MinIO, still maintained: PGSTY''s fork of the open-source server, with the full web console. It reads an existing MinIO data folder as it is.
