@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-seafile
 category: files
 name: Seafile
-version: 1.1.0
+version: 1.1.1
 tagline: The official Seafile server, with its secrets generated on first start and MariaDB, Redis and the notification server built in.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-seafile/icon.png
 description: Seafile is a file sync and share server with desktop and mobile clients, libraries you can encrypt on the client, and built-in wikis.

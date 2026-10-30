@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-standardnotes-webui
 category: files
 name: StandardNotes-WebUI
-version: 2026.10.23
+version: 2026.10.30
 tagline: The official Standard Notes web client, self-hosted next to your own sync server for end-to-end encrypted notes in the browser.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-standardnotes-webui/icon.png
 description: The official Standard Notes web client, self-hosted next to your own sync server for end-to-end encrypted notes in the browser.
