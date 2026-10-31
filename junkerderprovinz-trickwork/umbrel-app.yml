@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-trickwork
 category: media
 name: TrickWork
-version: 1.5.2
+version: 1.6.0
 tagline: Turns images into proportional-font-aware ASCII art - a rebuild of ASCII Gen 2, picking characters by real ink coverage, not brightness.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-trickwork/icon.png
 description: 'TrickWork turns your images into proportional-font-aware ASCII art - a rebuild of the abandoned ASCII Gen 2, with a live interactive preview and TXT/XHTML/RTF/PNG export. Characters are picked by how much visual "ink" they actually cover at your chosen font, not just by brightness, so proportional (non-monospace) fonts render correctly instead of looking stretched or squashed. Nine of ASCII Gen 2''s own original character ramps are built in, weighting mechanic included: repeat a character in the ramp and it claims proportionally more of the brightness range, exactly like the original. Fully stateless - no database, no accounts, nothing to configure beyond the port.'
