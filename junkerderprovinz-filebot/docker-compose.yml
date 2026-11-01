@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-filebot_filebot_1
+      APP_PORT: '3000'
+  filebot:
+    image: junkerderprovinz/filebot:latest
+    restart: on-failure
+    shm_size: 1gb
+    volumes:
+    - ${APP_DATA_DIR}/data:/config
+    - ${UMBREL_ROOT}/data/storage:/storage
+    environment:
+      TZ: Europe/Vienna
+      PUID: '1000'
+      PGID: '1000'
+      UMASK: '022'
+      FILEBOT_THEME: Darcula
+      AMC_ENABLED: '0'
+      AMC_INPUT_DIR: /watch
+      AMC_OUTPUT_DIR: /output
+      AMC_ACTION: test
+      AMC_CONFLICT: auto
+      AMC_MATCH_MODE: opportunistic
+      AMC_LANG: English
+      AMC_INTERVAL: '1800'
+      AMC_INPUT_STABLE_TIME: '10'
+      AMC_PROCESS_MUSIC: y
+      AMC_ARTWORK: n

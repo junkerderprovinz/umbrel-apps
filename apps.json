@@ -64,6 +64,13 @@
     "web_port": 3000,
     "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
   },
+  "filebot": {
+    "port": 35136,
+    "category": "media",
+    "developer": "Reinhard Pointner",
+    "web_port": 3000,
+    "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
+  },
   "filmcraft": {
     "port": 35127,
     "category": "media",
