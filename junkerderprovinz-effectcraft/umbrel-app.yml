@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-effectcraft
 category: media
 name: EffectCraft
-version: 1.1.0
+version: 1.1.1
 tagline: EffectCraft on a Selkies web desktop, for motion graphics with compositions, keyframes and effects in the browser.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-effectcraft/icon.png
 description: EffectCraft, motion graphics and compositing in the spirit of After Effects, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.

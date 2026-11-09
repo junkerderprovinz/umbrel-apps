@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-figcraft
 category: files
 name: FigCraft
-version: 1.1.0
+version: 1.1.1
 tagline: 'FigCraft on a Selkies web desktop: design interfaces with frames and components and click through prototypes in the browser.'
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-figcraft/icon.png
 description: FigCraft, interface design and prototyping in the spirit of Figma, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.

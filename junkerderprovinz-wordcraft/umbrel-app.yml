@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-wordcraft
 category: files
 name: WordCraft
-version: 1.1.0
+version: 1.1.1
 tagline: WordCraft on a Selkies web desktop, a word processor in the browser that opens and saves Word documents.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-wordcraft/icon.png
 description: WordCraft, a word processor that opens and saves Word .docx documents, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.

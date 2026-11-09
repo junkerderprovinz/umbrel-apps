@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-lightcraft
 category: media
 name: LightCraft
-version: 1.1.0
+version: 1.1.1
 tagline: LightCraft on a Selkies web desktop, a photo library and raw developer that sits right next to the photos on your array.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-lightcraft/icon.png
 description: LightCraft, a photo library and raw developer in the spirit of Lightroom, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.

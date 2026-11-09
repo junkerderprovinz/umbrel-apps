@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-vectorcraft
 category: media
 name: VectorCraft
-version: 1.1.0
+version: 1.1.1
 tagline: 'VectorCraft on a Selkies web desktop: vector illustration with paths and type, SVG and PDF in and out.'
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-vectorcraft/icon.png
 description: VectorCraft, vector illustration in the spirit of Illustrator, SVG and PDF in and out, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.
