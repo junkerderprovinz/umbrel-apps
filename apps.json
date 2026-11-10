@@ -12,6 +12,12 @@
     "web_port": 3000,
     "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
   },
+  "castleparcel": {
+    "port": 35105,
+    "category": "files",
+    "auth": false,
+    "id": "junkerderprovinz-featherdrop"
+  },
   "couchdb": {
     "port": 35102,
     "category": "developer",
@@ -51,11 +57,6 @@
     "category": "files",
     "developer": "Excalidraw",
     "web_port": 80
-  },
-  "featherdrop": {
-    "port": 35105,
-    "category": "files",
-    "auth": false
   },
   "figcraft": {
     "port": 35126,

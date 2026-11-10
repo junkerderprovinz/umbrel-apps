@@ -194,7 +194,9 @@ def build(feed, gen_compose, app, overrides):
     text, _ = gen_compose.compose(app, xml)
     required = re.findall(r"^\s+(\w+):.*# required$", text, re.M)
     service = yaml.safe_load(text)["services"][app]
-    app_id = f"{STORE}-{app}"
+    # An app renamed after people installed it keeps its id, so Umbrel updates
+    # it in place and it keeps its data folder.
+    app_id = overrides.get("id", f"{STORE}-{app}")
 
     match = re.match(r"(https?)://\[IP\]:\[PORT:(\d+)\](.*)", (root.findtext("WebUI") or "").strip())
     if not match:
