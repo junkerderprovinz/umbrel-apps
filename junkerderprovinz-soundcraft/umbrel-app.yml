@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-soundcraft
 category: media
 name: SoundCraft
-version: 1.1.1
+version: 1.1.2
 tagline: SoundCraft on a Selkies web desktop, a multitrack audio workstation whose sound plays in the browser.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-soundcraft/icon.png
 description: SoundCraft, multitrack audio recording and mixing in the spirit of Pro Tools, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.

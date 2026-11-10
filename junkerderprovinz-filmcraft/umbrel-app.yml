@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-filmcraft
 category: media
 name: FilmCraft
-version: 1.1.1
+version: 1.1.2
 tagline: FilmCraft on a Selkies web desktop, a nonlinear video editor that cuts the footage on your array from any browser.
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-filmcraft/icon.png
 description: FilmCraft, a nonlinear video editor in the spirit of Premiere Pro, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.

@@ -2,11 +2,11 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: junkerderprovinz-featherdrop_featherdrop_1
+      APP_HOST: junkerderprovinz-featherdrop_castleparcel_1
       APP_PORT: '3000'
       PROXY_AUTH_ADD: 'false'
-  featherdrop:
-    image: junkerderprovinz/featherdrop:latest
+  castleparcel:
+    image: junkerderprovinz/castleparcel:latest
     restart: on-failure
     volumes:
     - ${APP_DATA_DIR}/data/data:/data
