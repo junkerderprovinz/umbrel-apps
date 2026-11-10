@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/junkerderprovinz/umbrel-apps/actions/workflows/generate.yml"><img src="https://img.shields.io/github/actions/workflow/status/junkerderprovinz/umbrel-apps/generate.yml?branch=main&label=Generate&style=for-the-badge&logo=githubactions&logoColor=white" alt="Generate" height="36"></a>&nbsp;
-  <a href="#apps"><img src="https://img.shields.io/badge/Apps-35-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
+  <a href="#apps"><img src="https://img.shields.io/badge/Apps-36-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
   <a href="https://github.com/junkerderprovinz/umbrel-apps/commits/main"><img src="https://img.shields.io/github/last-commit/junkerderprovinz/umbrel-apps?branch=main&style=for-the-badge&logo=git&logoColor=white&label=Updated" alt="Last commit" height="36"></a>&nbsp;
   <a href="https://umbrel.com/umbrelos"><img src="https://img.shields.io/badge/umbrelOS-Community%20store-5351F3?style=for-the-badge&logoColor=white" alt="umbrelOS community app store" height="36"></a>&nbsp;
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" height="36"></a>
@@ -30,6 +30,16 @@ A community app store for <a href="https://umbrel.com/umbrelos">umbrelOS</a> wit
 
 **ArrowLoop**<br>
 Two-way file sync that shows you the plan before it touches a file, sends deletions to a trash and stops a run that would delete too much.
+
+<br clear="all">
+
+<a id="cannoncommander"></a>
+<img src=".github/readme-icons/cannoncommander.png" width="84" align="left" alt="CannonCommander">
+<a href="https://github.com/junkerderprovinz/cannoncommander#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
+<a href="https://github.com/junkerderprovinz/cannoncommander/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
+
+**CannonCommander**<br>
+The most beautiful file manager you will ever run, and the only one you need: two panels, F5 to copy, jobs in the background and a trash for second thoughts.
 
 <br clear="all">
 
@@ -405,8 +415,9 @@ Questions and bugs go to the issue tracker of the app's own repository; every ap
 The apps are built from the Unraid templates in [unraid-apps](https://github.com/junkerderprovinz/unraid-apps), through the same compose files the app repositories offer for other Docker hosts, with the changes umbrelOS needs:
 
 - Every web interface sits behind Umbrel's app proxy on a port of its own, 35101 and up.
-- Umbrel's login guards the apps that have none of their own. It is off for the apps whose own clients have to reach them: KnightLoader, ArrowLoop, featherdrop's share links, CouchDB, Seafile and Euro-Office.
+- Umbrel's login guards the apps that have none of their own. It is off for the apps whose own clients have to reach them: KnightLoader, ArrowLoop, CannonCommander, featherdrop's share links, CouchDB, Seafile and Euro-Office.
 - Appdata goes to the app's data folder. File managers, slicers and download managers see umbrelOS' shared storage, downloads land in its **Downloads** folder.
+- CannonCommander sees the shared storage where it looks for Unraid's user shares, `/mnt/user`, and keeps the capabilities and `/dev/fuse` it needs for rclone's mounts. It runs without Docker's AppArmor profile, which would refuse those mounts. The Unraid state and flash folders are left out.
 - `PUID` and `PGID` are `1000`, the user umbrelOS runs its apps as.
 - S3 and the other ports that are not a web page move to ports of their own as well, 35201 and up. Their usual numbers clash with apps in Umbrel's store and with each other. Each app's description in umbrelOS lists its ports.
 - Apps without a web page of their own (JuiceFS, ParleyPort) and apps that need a database next to them (Matrix, n8n, Claper) are not in the store yet. Neither is OpenCloud: its login service accepts only an https:// address, and Umbrel's app proxy talks plain HTTP to the app.
@@ -417,7 +428,7 @@ To change an app, edit its template in unraid-apps, not the app folders, `.githu
 python3 tools/generate.py ../unraid-apps
 ```
 
-`apps.json` lists the apps in the store with their Umbrel port and category. Per app it can also name the port the proxy talks to (`web_port`), give the other ports their Umbrel port (`host_ports`), turn Umbrel's login off (`auth`), set where a folder goes (`paths`), leave a path out (`drop_paths`), set variables (`env`), name the login shown next to the app (`username`), name the upstream developer (`developer`), read a template file with another name (`xml`) or replace the short text and description (`tagline`, `description`).
+`apps.json` lists the apps in the store with their Umbrel port and category. Per app it can also name the port the proxy talks to (`web_port`), give the other ports their Umbrel port (`host_ports`), turn Umbrel's login off (`auth`), set where a folder goes (`paths`) and where it shows up in the container (`targets`), leave a path out (`drop_paths`), set Docker's `security_opt` (`security_opt`), set variables (`env`), name the login shown next to the app (`username`), name the upstream developer (`developer`), read a template file with another name (`xml`) or replace the short text and description (`tagline`, `description`).
 
 
 ## How AI is used here

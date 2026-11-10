@@ -12,6 +12,16 @@
     "web_port": 3000,
     "paths": {"/storage": "${UMBREL_ROOT}/data/storage"}
   },
+  "cannoncommander": {
+    "port": 35137,
+    "category": "files",
+    "auth": false,
+    "paths": {"/mnt": "${UMBREL_ROOT}/data/storage"},
+    "targets": {"/mnt": "/mnt/user"},
+    "drop_paths": ["/var/local/emhttp", "/boot/config"],
+    "security_opt": ["apparmor:unconfined"],
+    "description": "The most beautiful file manager you will ever run. Also the only one you need. On the first start it writes a password for the user admin into its log, which you find under Troubleshoot when you right-click the app. Sign in with it and pick your own."
+  },
   "castleparcel": {
     "port": 35105,
     "category": "files",

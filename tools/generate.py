@@ -172,7 +172,7 @@ def data_path(volume, overrides):
         if host is None:
             folder = "data/" + volume.split(":")[0][2:]
             host = "${APP_DATA_DIR}/" + folder
-    return ":".join([host, target, *mode]), folder
+    return ":".join([host, overrides.get("targets", {}).get(target, target), *mode]), folder
 
 
 def credential(key):
@@ -191,9 +191,16 @@ def credential(key):
 def build(feed, gen_compose, app, overrides):
     xml = overrides.get("xml", f"{app}.xml")
     root = ET.parse(feed / app / xml).getroot()
-    text, _ = gen_compose.compose(app, xml)
+    text, unknown = gen_compose.compose(app, xml)
     required = re.findall(r"^\s+(\w+):.*# required$", text, re.M)
     service = yaml.safe_load(text)["services"][app]
+    caps = [arg.split("=", 1)[1] for arg in unknown if arg.startswith("--cap-add=")]
+    if caps:
+        service["cap_add"] = caps
+    # Unraid has no AppArmor. umbrelOS confines containers with Docker's
+    # profile, which forbids mounts even with SYS_ADMIN.
+    if "security_opt" in overrides:
+        service["security_opt"] = overrides["security_opt"]
     # An app renamed after people installed it keeps its id, so Umbrel updates
     # it in place and it keeps its data folder.
     app_id = overrides.get("id", f"{STORE}-{app}")
