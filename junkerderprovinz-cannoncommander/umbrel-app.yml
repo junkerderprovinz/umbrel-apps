@@ -2,7 +2,7 @@ manifestVersion: 1
 id: junkerderprovinz-cannoncommander
 category: files
 name: CannonCommander
-version: 1.0.0
+version: 1.0.1
 tagline: 'The most beautiful file manager you will ever run, and the only one you need: two panels, F5 to copy, jobs in the background and a trash for second thoughts.'
 icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-cannoncommander/icon.png
 description: The most beautiful file manager you will ever run. Also the only one you need. On the first start it writes a password for the user admin into its log, which you find under Troubleshoot when you right-click the app. Sign in with it and pick your own.
