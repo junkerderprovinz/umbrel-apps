@@ -15,3 +15,12 @@ services:
       PUID: '1000'
       PGID: '1000'
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: Stellarium
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/stellarium/icon.png
+      homepage.description: Planetarium in the browser
+      glance.name: Stellarium
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/stellarium/icon.png
+      glance.description: Planetarium in the browser

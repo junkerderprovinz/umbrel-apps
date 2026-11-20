@@ -25,6 +25,15 @@ services:
       VGW_DISABLE_OTMP: 'false'
       VGW_WEBUI_GATEWAYS: http://${DEVICE_DOMAIN_NAME}:35209
       VGW_WEBUI_ADMIN_GATEWAYS: http://${DEVICE_DOMAIN_NAME}:35210
+    labels:
+      homepage.href: ''
+      homepage.group: Backup
+      homepage.name: VersityGW
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/versitygw/icon.png
+      homepage.description: S3 API in front of an existing share
+      glance.name: VersityGW
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/versitygw/icon.png
+      glance.description: S3 API in front of an existing share
     ports:
     - 35209:7070
     - 35210:7080

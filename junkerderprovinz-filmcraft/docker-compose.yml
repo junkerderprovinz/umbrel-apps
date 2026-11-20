@@ -16,3 +16,12 @@ services:
       PUID: '1000'
       PGID: '1000'
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: FilmCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/filmcraft/icon.png
+      homepage.description: Video editor in the browser
+      glance.name: FilmCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/filmcraft/icon.png
+      glance.description: Video editor in the browser

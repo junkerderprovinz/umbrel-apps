@@ -16,3 +16,12 @@ services:
       PUID: '1000'
       PGID: '1000'
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: DesignCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/designcraft/icon.png
+      homepage.description: Page layout for magazines and flyers
+      glance.name: DesignCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/designcraft/icon.png
+      glance.description: Page layout for magazines and flyers

@@ -16,3 +16,12 @@ services:
       PUID: '1000'
       PGID: '1000'
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: PhotoCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/photocraft/icon.png
+      homepage.description: Layered photo editor in the browser
+      glance.name: PhotoCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/photocraft/icon.png
+      glance.description: Layered photo editor in the browser

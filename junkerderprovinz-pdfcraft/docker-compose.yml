@@ -16,3 +16,12 @@ services:
       PUID: '1000'
       PGID: '1000'
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: PdfCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/pdfcraft/icon.png
+      homepage.description: Read, edit, sign and OCR PDFs
+      glance.name: PdfCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/pdfcraft/icon.png
+      glance.description: Read, edit, sign and OCR PDFs

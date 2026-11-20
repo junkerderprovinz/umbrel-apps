@@ -9,3 +9,12 @@ services:
     restart: on-failure
     environment:
       PORT: '3210'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: TrickWork
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/trickwork/icon.png?v=5
+      homepage.description: Turns images into ASCII art
+      glance.name: TrickWork
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/trickwork/icon.png?v=5
+      glance.description: Turns images into ASCII art

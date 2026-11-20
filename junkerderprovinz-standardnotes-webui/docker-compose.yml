@@ -7,3 +7,12 @@ services:
   standardnotes-webui:
     image: standardnotes/web:latest
     restart: on-failure
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: Standard Notes
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/standardnotes-webui/icon.png
+      homepage.description: Web client for encrypted notes
+      glance.name: Standard Notes
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/standardnotes-webui/icon.png
+      glance.description: Web client for encrypted notes

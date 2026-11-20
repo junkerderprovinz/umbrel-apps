@@ -16,3 +16,12 @@ services:
       PUID: '1000'
       PGID: '1000'
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: DeckCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/deckcraft/icon.png
+      homepage.description: Build and present slide decks in the browser
+      glance.name: DeckCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/deckcraft/icon.png
+      glance.description: Build and present slide decks in the browser

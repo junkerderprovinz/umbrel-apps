@@ -14,6 +14,15 @@ services:
       DB_ENGINE: sqlite
       PUID: '1000'
       PGID: '1000'
+    labels:
+      homepage.href: ''
+      homepage.group: Backup
+      homepage.name: Garage
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/garage/icon.png?v=3
+      homepage.description: S3-compatible object store with a web admin
+      glance.name: Garage
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/garage/icon.png?v=3
+      glance.description: S3-compatible object store with a web admin
     ports:
     - 35202:3900
     - 35203:3902

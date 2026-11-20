@@ -16,3 +16,12 @@ services:
       PUID: '1000'
       PGID: '1000'
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: SoundCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/soundcraft/icon.png
+      homepage.description: Multitrack audio workstation
+      glance.name: SoundCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/soundcraft/icon.png
+      glance.description: Multitrack audio workstation

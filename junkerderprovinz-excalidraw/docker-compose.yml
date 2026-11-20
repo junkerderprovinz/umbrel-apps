@@ -13,3 +13,12 @@ services:
       ENABLE_LIBRARY: 'false'
       ENABLE_AI: 'false'
       TZ: Europe/Berlin
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: Excalidraw
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/excalidraw/icon.png?v=2
+      homepage.description: Hand-drawn whiteboard with live collaboration
+      glance.name: Excalidraw
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/excalidraw/icon.png?v=2
+      glance.description: Hand-drawn whiteboard with live collaboration

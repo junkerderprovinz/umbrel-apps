@@ -16,3 +16,12 @@ services:
       PUID: '1000'
       PGID: '1000'
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: PrusaSlicer
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/prusaslicer/icon.png?v=3
+      homepage.description: 3D-printing slicer in the browser
+      glance.name: PrusaSlicer
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/prusaslicer/icon.png?v=3
+      glance.description: 3D-printing slicer in the browser

@@ -16,3 +16,12 @@ services:
       PUID: '1000'
       PGID: '1000'
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: LightCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/lightcraft/icon.png
+      homepage.description: Photo library and raw developer
+      glance.name: LightCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/lightcraft/icon.png
+      glance.description: Photo library and raw developer

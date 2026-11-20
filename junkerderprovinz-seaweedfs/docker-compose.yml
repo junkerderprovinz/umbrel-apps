@@ -9,6 +9,15 @@ services:
     restart: on-failure
     volumes:
     - ${APP_DATA_DIR}/data/data:/data
+    labels:
+      homepage.href: ''
+      homepage.group: Backup
+      homepage.name: SeaweedFS
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/seaweedfs/icon.png?v=2
+      homepage.description: S3-compatible object store
+      glance.name: SeaweedFS
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/seaweedfs/icon.png?v=2
+      glance.description: S3-compatible object store
     ports:
     - 35205:8333
     - 35206:9333
