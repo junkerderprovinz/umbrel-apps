@@ -20,7 +20,7 @@
     "targets": {"/mnt": "/mnt/user"},
     "drop_paths": ["/var/local/emhttp", "/boot/config"],
     "security_opt": ["apparmor:unconfined"],
-    "description": "The most beautiful file manager you will ever run. Also the only one you need. On the first start it writes a password for the user admin into its log, which you find under Troubleshoot when you right-click the app. Sign in with it and pick your own."
+    "description": "The most beautiful file manager you will ever run. Also the only one you need. It opens without a password, and you set one in its settings whenever you want one."
   },
   "castleparcel": {
     "port": 35105,
