@@ -1,7 +1,7 @@
 /**
  * The store banner, in the layout of the GitHub style guide: the Umbrel mark on the
  * left (largest ink 400px, ink-left x=165, centred on y=250), the name to its
- * right in Bree Serif Light at a cap height of 110, and one Bree Light claim below it. Light and dark variants for the README's
+ * right in Bree Serif Regular at a cap height of 110, and one Bree Light claim below it. Light and dark variants for the README's
  * <picture>; the single-colour mark takes the text colour of each.
  *
  * Text is rendered at the origin and placed with a transform, because
@@ -40,7 +40,7 @@ const THEMES = [
 
 // The house typeface is licensed, so it is read from a local folder and never committed.
 const fonts = process.env.HOUSE_FONTS ?? join(process.env.LOCALAPPDATA ?? tmpdir(), "halleluja-fonts");
-const bree = opentype.parse(readFileSync(join(fonts, "bree-serif-light.ttf")).buffer);
+const bree = opentype.parse(readFileSync(join(fonts, "bree-serif-regular.ttf")).buffer);
 const claimFont = opentype.parse(readFileSync(join(fonts, "bree-light.ttf")).buffer);
 const bbox = (vb, content) =>
   new Resvg(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}">${content}</svg>`, { fitTo: { mode: "original" } }).getBBox();
