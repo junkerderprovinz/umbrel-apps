@@ -5,6 +5,16 @@
     "auth": false,
     "paths": {"/data": "${UMBREL_ROOT}/data/storage"}
   },
+  "bombvault": {
+    "xml": "my-BombVault.xml",
+    "port": 35139,
+    "category": "files",
+    "web_port": 3000,
+    "paths": {"/host/user": "${UMBREL_ROOT}"},
+    "drop_paths": ["/host/boot"],
+    "env": {"PLATFORM": "generic", "HTTP_ONLY": "true", "HOST_SOURCE_ROOT": "${UMBREL_ROOT}", "DATA_ROOT_SEGMENTS": "app-data", "APP_KEY": "${APP_SEED}"},
+    "tagline": "Backup and disaster recovery for containers and VMs, powered by restic, with one-click backup and cross-server restore."
+  },
   "cadcraft": {
     "port": 35122,
     "category": "files",
