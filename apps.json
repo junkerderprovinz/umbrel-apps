@@ -95,6 +95,10 @@
     "developer": "Deuxfleurs",
     "host_ports": {"3900": 35202, "3902": 35203}
   },
+  "github-runner": {
+    "port": 35138,
+    "category": "developer"
+  },
   "gridcraft": {
     "port": 35128,
     "category": "files",
