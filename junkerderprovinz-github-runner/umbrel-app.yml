@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: junkerderprovinz-github-runner
+category: developer
+name: GitHub-Runner
+version: 1.0.1
+tagline: Self-hosted GitHub Actions runners for several repositories of a personal account in one container, removed from GitHub again when it stops.
+icon: https://raw.githubusercontent.com/junkerderprovinz/umbrel-apps/main/junkerderprovinz-github-runner/icon.png
+description: Self-hosted GitHub Actions runners for several repositories in one container.
+developer: Junker der Provinz
+website: https://github.com/junkerderprovinz/github-runner
+dependencies: []
+repo: https://github.com/junkerderprovinz/github-runner
+support: https://github.com/junkerderprovinz/github-runner/issues
+port: 35138
+gallery: []
+path: /
+defaultUsername: ''
+defaultPassword: ''
+submitter: Junker der Provinz
+submission: https://github.com/junkerderprovinz/umbrel-apps

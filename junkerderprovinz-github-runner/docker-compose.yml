@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: junkerderprovinz-github-runner_github-runner_1
+      APP_PORT: '8080'
+  github-runner:
+    image: junkerderprovinz/github-runner:latest
+    restart: on-failure
+    stop_grace_period: 60s
+    volumes:
+    - ${APP_DATA_DIR}/data:/config
+    - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      RUNNER_NAME: GitHub-Runner
+      LABELS: self-hosted
+      NO_DEFAULT_LABELS: 'false'
+      RUN_AS_ROOT: 'true'
+      DEREGISTER_ON_STOP: 'true'
+      RETRY_SECONDS: '300'
+    labels:
+      homepage.group: Tools
+      homepage.name: GitHub-Runner
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/github-runner/icon.png
+      homepage.description: GitHub Actions runners for several repositories
+      glance.name: GitHub-Runner
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/github-runner/icon.png
+      glance.description: GitHub Actions runners for several repositories
